@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PawsPals — Single Page Pet Shop</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="brand">🐾 <strong>PawsPals</strong></div>
+    <nav class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#pets">Pets</a>
+      <a href="#shop">Shop</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <div class="search-container">
+        <input id="search" placeholder="Search products..." />
+        <button id="search-btn" class="search-btn">🔍</button>
+        <button id="clear-search-btn" class="clear-search-btn" style="display: none;">✕</button>
+      </div>
+      <a class="btn" href="login.html">Login</a>
+      <a class="btn ghost" href="cart.html">Cart (0)</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="hero-left">
+      <small class="kicker">Welcome to our Pet Emporium</small>
+      <h1>Discover Endless<br><span>Furry & Feathered Friends</span></h1>
+      <p class="lead">Quality food, toys, grooming & accessories — everything your pet needs in one friendly place.</p>
+
+      <div class="hero-ctas">
+        <a class="btn" href="#shop" data-target="dogs">Shop Dogs Accessories </a>
+        <a class="btn ghost" href="#shop" data-target="cats">Shop Cats Accessories </a>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="hero-card">
+        <img src="Dog main image.png" alt="dog" />
+      </div>
+    </div>
+  </section>
+
+  <!-- PETS INFO (basic info for each pet) -->
+  <section id="pets" class="section section-pets">
+    <h2 class="section-title">Our Pets — Quick Facts</h2>
+    <div class="pets-grid">
+      <article class="pet-card">
+        <img src="Dog 2.png" alt="dog">
+        <h3>Dogs</h3>
+        <p><strong>Temperament:</strong> Loyal, social, trainable.<br>
+           <strong>Care:</strong> Daily exercise, balanced diet, grooming, vaccinations.<br>
+           <strong>Lifespan:</strong> 8–15 years (varies by breed).</p>
+      </article>
+
+      <article class="pet-card">
+        <img src="https://cdn.pixabay.com/photo/2017/11/09/21/41/cat-2934720_1280.jpg" alt="cat">
+        <h3>Cats</h3>
+        <p><strong>Temperament:</strong> Independent, curious, affectionate.<br>
+           <strong>Care:</strong> Litter box, scratching posts, balanced diet, regular vet checks.<br>
+           <strong>Lifespan:</strong> 12–20 years.</p>
+      </article>
+
+      <article class="pet-card">
+        <img src="Bird 1.jpg" alt="bird">
+        <h3>Birds</h3>
+        <p><strong>Temperament:</strong> Social, vocal (species dependent).<br>
+           <strong>Care:</strong> Spacious cage, perches, mental stimulation, varied diet.<br>
+           <strong>Lifespan:</strong> 5–80+ years (species dependent).</p>
+      </article>
+
+      <article class="pet-card">
+        <img src="Fish.jpg" alt="fish">
+        <h3>Fish</h3>
+        <p><strong>Temperament:</strong> Quiet, tranquil to active (species dependent).<br>
+           <strong>Care:</strong> Proper tank size, filtration, water chemistry, diet.<br>
+           <strong>Lifespan:</strong> 1–20+ years (species dependent).</p>
+      </article>
+
+      <article class="pet-card">
+        <img src="Group.jpg" alt="small pet">
+        <h3>Small Pets</h3>
+        <p><strong>Examples:</strong> Rabbits, hamsters, guinea pigs.<br>
+           <strong>Care:</strong> Enrichment, clean habitat, appropriate diet, social needs vary.<br>
+           <strong>Lifespan:</strong> 2–12 years.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- SHOP -->
+  <section id="shop" class="section section-shop">
+    <h2 class="section-title">Shop — Categories & Items</h2>
+
+    <!-- Category Tabs (pure CSS using radio buttons) -->
+    <div class="tabs">
+      <!-- radios -->
+      <input type="radio" name="tab" id="tab-all" checked />
+      <input type="radio" name="tab" id="tab-dogs" />
+      <input type="radio" name="tab" id="tab-cats" />
+      <input type="radio" name="tab" id="tab-birds" />
+      <input type="radio" name="tab" id="tab-fish" />
+      <input type="radio" name="tab" id="tab-small" />
+      <input type="radio" name="tab" id="tab-access" />
+
+      <!-- labels -->
+      <div class="tabs-nav">
+        <label for="tab-all" class="tab-btn">All</label>
+        <label for="tab-dogs" class="tab-btn">Dogs</label>
+        <label for="tab-cats" class="tab-btn">Cats</label>
+        <label for="tab-birds" class="tab-btn">Birds</label>
+        <label for="tab-fish" class="tab-btn">Fish</label>
+        <label for="tab-small" class="tab-btn">Small Pets</label>
+        <label for="tab-access" class="tab-btn">Accessories</label>
+      </div>
+
+      <!-- content panels -->
+      <div class="tabs-content">
+
+        <!-- ALL -->
+        <div class="panel panel-all">
+          <div class="product-grid">
+            <!-- include some highlighted products from each category -->
+            <article class="product">
+              <img src="Premium Dog Kibble 5kg.webp" alt="">
+              <h4>Premium Dog Kibble 5kg</h4>
+              <p class="price">₹1,499</p>
+              <button class="add">Add to Cart</button>
+            </article>
+
+            <article class="product">
+              <img src="Grain-Free Cat Pouch.webp" alt="">
+              <h4>Grain-Free Cat Pouch (24)</h4>
+              <p class="price">₹899</p>
+              <button class="add">Add to Cart</button>
+            </article>
+
+            <article class="product">
+              <img src="Vitamin Seed Mix (Birds).jpg" alt="">
+              <h4>Vitamin Seed Mix (Birds)</h4>
+              <p class="price">₹349</p>
+              <button class="add">Add to Cart</button>
+            </article>
+
+            <article class="product">
+              <img src="AquaFlake Fish Food.png" alt="">
+              <h4>AquaFlake Fish Food</h4>
+              <p class="price">₹199</p>
+              <button class="add">Add to Cart</button>
+            </article>
+          </div>
+        </div>
+
+        <!-- DOGS -->
+        <div class="panel panel-dogs">
+          <div class="product-grid">
+            <article class="product">
+              <img src="https://cdn.pixabay.com/photo/2016/02/19/11/53/dog-1209621_1280.png" alt="">
+              <h4>Chicken Kibble — 2kg</h4>
+              <p class="price">₹799</p>
+              <button class="add">Add</button>
+            </article>
+
+            <article class="product">
+              <img src="https://cdn.pixabay.com/photo/2016/03/27/19/23/dog-1284303_1280.jpg" alt="">
+              <h4>Dog Chew Toy (Durable)</h4>
+              <p class="price">₹299</p>
+              <button class="add">Add</button>
+            </article>
+
+            <article class="product">
+              <img src="https://cdn.pixabay.com/photo/2017/09/25/13/12/dog-2784188_1280.jpg" alt="">
+              <h4>Adjustable Leash & Belt</h4>
+              <p class="price">₹499</p>
+              <button class="add">Add</button>
+            </article>
+
+            <article class="product">
+              <img src="https://cdn.pixabay.com/photo/2017/09/25/13/12/dog-2784188_1280.jpg" alt="">
+              <h4>Stainless Food Bowl (Set of 2)</h4>
+              <p class="price">₹349</p>
+              <button class="add">Add</button>
+            </article>
+
+            <article class="product">
+              <img src="https://cdn.pixabay.com/photo/2018/01/06/05/41/dog-3066070_1280.jpg" alt="">
+              <h4>Calcium Chew Bars (Pack)</h4>
+              <p class="price">₹249</p>
+              <button class="add">Add</button>
+            </article>
+
+            <article class="product">
+              <img src="https://cdn.pixabay.com/photo/2018/03/31/07/24/sausages-3274970_1280.jpg" alt="">
+              <h4>Premium Dog Meat Mix (Wet)</h4>
+              <p class="price">₹159</p>
+              <button class="add">Add</button>
+            </article>
+          </div>
+        </div>
+
+        <!-- CATS -->
+        <div class="panel panel-cats">
+          <div class="product-grid">
+            <article class="product">
+              <img src="https://cdn.pixabay.com/photo/2017/11/09/21/41/cat-2934720_1280.jpg" alt="">
+              <h4>Salmon Cat Pouches (12)</h4>
+              <p class="price">₹699</p>
+              <button class="add">Add</button>
+            </article>
+
+            <article class="product">
+              <img src="https://cdn.pixabay.com/photo/2014/11/21/17/50/toucan-540163_1280.jpg" alt="">
+              <h4>Interactive Cat Scratcher</h4>
+              <p class="price">₹1,299</p>
+              <button class="add">Add</button>
+            </article>
+
+            <article class="product">
+              <img src="https://cdn.pixabay.com/photo/2015/11/16/16/28/cat-1046544_1280.jpg" alt="">
+              <h4>Catnip Toys (3 pack)</h4>
+              <p class="price">₹149</p>
+              <button class="add">Add</button>
+            </article>
+
+            <article class="product">
+              <img src="https://cdn.pixabay.com/photo/2017/08/07/06/36/cat-2597874_1280.jpg" alt="">
+              <h4>Self-Clean Litter Box</h4>
+              <p class="price">₹2,499</p>
+              <button class="add">Add</button>
+            </article>
+          </div>
+        </div>
+
+        <!-- BIRDS -->
+        <div class="panel panel-birds">
+          <div class="product-grid">
+            <article class="product">
+              <img src="https://cdn.pixabay.com/photo/2018/04/03/10/17/parakeet-3283352_1280.jpg" alt="">
+              <h4>Premium Seed & Nut Mix</h4>
+              <p class="price">₹349</p>
+              <button class="add">Add</button>
+            </article>
+
+            <article class="product">
+              <img src="https://cdn.pixabay.com/photo/2016/03/27/19/23/dog-1284303_1280.jpg" alt="">
+              <h4>Wooden Play Perch</h4>
+              <p class="price">₹799</p>
+              <button class="add">Add</button>
+            </article>
+
+            <article class="product">
+              <img src="https://cdn.pixabay.com/photo/2017/09/25/13/12/dog-2784188_1280.jpg" alt="">
+              <h4>Bird Bath & Feeder Combo</h4>
+              <p class="price">₹599</p>
+              <button class="add">Add</button>
+            </article>
+          </div>
+        </div>
+
+        <!-- FISH -->
+        <div class="panel panel-fish">
+          <div class="product-grid">
+            <article class="product">
+              <img src="https://cdn.pixabay.com/photo/2016/08/16/03/51/goldfish-1596017_1280.jpg" alt="">
+              <h4>Flake & Pellet Food Combo</h4>
+              <p class="price">₹199</p>
+              <button class="add">Add</button>
+            </article>
+
+            <article class="product">
+              <img src="https://cdn.pixabay.com/photo/2017/08/07/06/36/cat-2597874_1280.jpg" alt="">
+              <h4>Aqua Filter (compact)</h4>
+              <p class="price">₹1,199</p>
+              <button class="add">Add</button>
+            </article>
+
+            <article class="product">
+              <img src="https://cdn.pixabay.com/photo/2016/11/18/15/28/dog-1835743_1280.jpg" alt="">
+              <h4>Ornamental Plants (safe)</h4>
+              <p class="price">₹249</p>
+              <button class="add">Add</button>
+            </article>
+          </div>
+        </div>
+
+        <!-- SMALL PETS -->
+        <div class="panel panel-small">
+          <div class="product-grid">
+            <article class="product">
+              <img src="https://cdn.pixabay.com/photo/2016/11/22/19/37/hamster-1851214_1280.jpg" alt="">
+              <h4>Healthy Hay Bundle</h4>
+              <p class="price">₹199</p>
+              <button class="add">Add</button>
+            </article>
+
+            <article class="product">
+              <img src="https://cdn.pixabay.com/photo/2017/09/25/13/12/dog-2784188_1280.jpg" alt="">
+              <h4>Hamster Wheel (Silent)</h4>
+              <p class="price">₹499</p>
+              <button class="add">Add</button>
+            </article>
+
+            <article class="product">
+              <img src="https://cdn.pixabay.com/photo/2018/01/06/05/41/dog-3066070_1280.jpg" alt="">
+              <h4>Guinea Pig Vitamin Mix</h4>
+              <p class="price">₹149</p>
+              <button class="add">Add</button>
+            </article>
+          </div>
+        </div>
+
+        <!-- ACCESSORIES -->
+        <div class="panel panel-access">
+          <div class="product-grid">
+            <article class="product">
+              <img src="https://cdn.pixabay.com/photo/2016/11/21/12/59/dog-food-1845880_1280.jpg" alt="">
+              <h4>Travel Carrier (M)</h4>
+              <p class="price">₹1,999</p>
+              <button class="add">Add</button>
+            </article>
+
+            <article class="product">
+              <img src="https://cdn.pixabay.com/photo/2018/03/31/07/24/sausages-3274970_1280.jpg" alt="">
+              <h4>Grooming Kit (All-in-1)</h4>
+              <p class="price">₹649</p>
+              <button class="add">Add</button>
+            </article>
+
+            <article class="product">
+              <img src="https://cdn.pixabay.com/photo/2016/02/19/11/53/dog-1209621_1280.png" alt="">
+              <h4>Collar & ID Tag</h4>
+              <p class="price">₹249</p>
+              <button class="add">Add</button>
+            </article>
+          </div>
+        </div>
+
+      </div> <!-- tabs-content -->
+    </div> <!-- tabs -->
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section section-about">
+    <div class="about-container">
+      <div class="about-header">
+        <h2>🐾 About PawsPals</h2>
+        <p class="about-subtitle">Your Trusted Pet Care Partner Since 2020</p>
+      </div>
+      
+      <div class="about-content">
+        <div class="about-section">
+          <h3>Our Mission</h3>
+          <p>We are dedicated to providing pet lovers with premium quality products and expert guidance to ensure their furry, feathered, and aquatic friends live happy, healthy lives. Every product in our store is carefully curated and tested.</p>
+        </div>
+        
+        <div class="about-section">
+          <h3>What We Offer</h3>
+          <ul>
+            <li>🍖 Premium pet foods and nutrition supplements</li>
+            <li>🎾 Engaging toys for all pet types</li>
+            <li>🛁 Grooming products and hygiene supplies</li>
+            <li>🏠 Comfortable beds and accessories</li>
+            <li>✈️ Travel essentials and carriers</li>
+            <li>📚 Expert pet care guidance and tips</li>
+          </ul>
+        </div>
+        
+        <div class="about-section">
+          <h3>Why Choose PawsPals?</h3>
+          <ul>
+            <li>✅ 100% Authentic Products - No compromises on quality</li>
+            <li>✅ Expert Recommendations - Curated by pet care professionals</li>
+            <li>✅ Fast Delivery - Quick shipping to your doorstep</li>
+            <li>✅ Customer Support - Dedicated 24/7 assistance</li>
+            <li>✅ Easy Returns - Hassle-free return policy</li>
+            <li>✅ Best Prices - Competitive pricing with regular offers</li>
+          </ul>
+        </div>
+        
+        <div class="about-stats">
+          <div class="stat-box">
+            <div class="stat-number">50K+</div>
+            <div class="stat-label">Happy Customers</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-number">500+</div>
+            <div class="stat-label">Quality Products</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-number">6</div>
+            <div class="stat-label">Store Locations</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-number">24/7</div>
+            <div class="stat-label">Customer Support</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="Registration">
+    <a class="btn" href="Form.html">Registration Form</a>
+  </div>
+  
+
+  <!-- CONTACT -->
+  <section id="contact" class="section section-contact">
+    <div class="contact-container">
+      <div class="contact-header">
+        <h2>📞 Contact Us</h2>
+        <p class="contact-subtitle">We're here to help! Reach out anytime.</p>
+      </div>
+      
+      <div class="contact-content">
+        <div class="contact-info">
+          <div class="contact-box">
+            <div class="contact-icon">📧</div>
+            <h3>Email Support</h3>
+            <p><a href="mailto:support@pawspals.com">support@pawspals.com</a></p>
+            <p class="contact-detail">Response within 24 hours</p>
+          </div>
+          
+          <div class="contact-box">
+            <div class="contact-icon">📱</div>
+            <h3>Call Us</h3>
+            <p><a href="tel:+919876543210">+91 98765 xxxxx</a></p>
+            <p class="contact-detail">Mon-Sun: 9 AM - 9 PM IST</p>
+          </div>
+          
+          <div class="contact-box">
+            <div class="contact-icon">Chatme.#1</div>
+            <h3>Live Chat</h3>
+            <p><a href="#chat">Start Live Chat</a></p>
+            <p class="contact-detail">Available during business hours</p>
+          </div>
+          
+          <div class="contact-box">
+            <div class="contact-icon">📍</div>
+            <h3>Visit Us</h3>
+            <p>6 Store Locations Across India</p>
+            <p class="contact-detail">Delhi • Mumbai • Bangalore • Hyderabad • Chennai • Kolkata</p>
+          </div>
+        </div>
+        
+        <div class="contact-form-section">
+          <h3>Send us a Message</h3>
+          <form class="contact-form">
+            <div class="form-group">
+              <input type="text" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+              <textarea placeholder="Your Message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="faq-section">
+        <h3>❓ Frequently Asked Questions</h3>
+        <div class="faq-items">
+          <div class="faq-item">
+            <h4>What is your delivery time?</h4>
+            <p>We typically deliver within 3-5 business days for most locations. Express delivery available for additional charges.</p>
+          </div>
+          <div class="faq-item">
+            <h4>Do you offer cash on delivery?</h4>
+            <p>Yes! We accept COD, Credit/Debit cards, UPI, and mobile wallets. Choose your preferred payment method at checkout.</p>
+          </div>
+          <div class="faq-item">
+            <h4>What is your return policy?</h4>
+            <p>We offer 30-day returns on unopened products. Food items cannot be returned once opened for safety reasons.</p>
+          </div>
+          <div class="faq-item">
+            <h4>Are your products authentic?</h4>
+            <p>100% authentic! All products are sourced directly from authorized distributors and manufacturers.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div>© 2025 PawsPals. All rights reserved.</div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,343 @@
+/* =========================================================
+   BASE VARIABLES - PawsPals Theme
+   ========================================================= */
+:root {
+  --accent: #ff7a59;
+  --accent-2: #103252;
+  --bg1: linear-gradient(180deg, #f6fbff 0%, #fffaf3 100%);
+  --card: #ffffff;
+  --muted: #7b8794;
+  --radius: 18px;
+  --container: 1200px;
+}
+
+/* =========================================================
+   GLOBAL RESET
+   ========================================================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI",
+               Roboto, "Helvetica Neue", Arial;
+  background: var(--bg1);
+  color: #10202b;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* =========================================================
+   HEADER / NAVIGATION
+   ========================================================= */
+header {
+  position: fixed;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 48px);
+  max-width: var(--container);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(6px);
+  border-radius: 14px;
+  padding: 10px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 8px 28px rgba(6, 12, 24, 0.08);
+  z-index: 999;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--accent-2);
+}
+
+.nav-links {
+  flex: 1;
+  margin-left: 18px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.nav-links a {
+  color: #213642;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 6px 8px;
+  border-radius: 8px;
+  transition: all 0.18s ease;
+}
+
+.nav-links a:hover {
+  background: rgba(16, 50, 82, 0.04);
+  transform: translateY(-3px);
+}
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+main {
+  flex: 1;
+  margin-top: 80px;
+  padding: 60px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* =========================================================
+   FORM SECTION
+   ========================================================= */
+.form-container {
+  width: 100%;
+  max-width: 600px;
+  background: var(--card);
+  padding: 48px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(16, 40, 60, 0.08);
+}
+
+.form-container h2 {
+  font-size: 32px;
+  color: var(--accent-2);
+  margin-bottom: 32px;
+  text-align: center;
+  font-weight: 700;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* =========================================================
+   FORM GROUPS
+   ========================================================= */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+label {
+  font-weight: 700;
+  color: var(--accent-2);
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="password"] {
+  padding: 12px 16px;
+  border: 2px solid rgba(16, 50, 82, 0.08);
+  border-radius: 10px;
+  font-size: 15px;
+  font-family: inherit;
+  transition: all 0.18s ease;
+  background: #f8fbff;
+}
+
+select,
+textarea {
+  padding: 12px 16px;
+  border: 2px solid rgba(16, 50, 82, 0.08);
+  border-radius: 10px;
+  font-size: 15px;
+  font-family: inherit;
+  transition: all 0.18s ease;
+  background: #f8fbff;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus,
+input[type="password"]:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(255, 122, 89, 0.1);
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+textarea::placeholder {
+  color: var(--muted);
+}
+
+/* =========================================================
+   RADIO BUTTONS & CHECKBOXES
+   ========================================================= */
+.radio-group {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.radio-option,
+.checkbox-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: var(--accent);
+}
+
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+  margin: 0;
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: none;
+  letter-spacing: 0;
+  cursor: pointer;
+}
+
+/* =========================================================
+   SUBMIT BUTTON
+   ========================================================= */
+input[type="submit"] {
+  padding: 14px 24px;
+  background: var(--accent);
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  box-shadow: 0 8px 20px rgba(255, 122, 89, 0.14);
+  margin-top: 12px;
+}
+
+input[type="submit"]:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(255, 122, 89, 0.2);
+}
+
+input[type="submit"]:active {
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+footer {
+  margin-top: auto;
+  padding: 28px;
+  text-align: center;
+  color: #8aa0b0;
+  background: linear-gradient(
+    180deg,
+    rgba(16, 50, 82, 0.04),
+    rgba(16, 50, 82, 0.02)
+  );
+}
+
+footer a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: all 0.18s ease;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* =========================================================
+   RESPONSIVE DESIGN
+   ========================================================= */
+@media (max-width: 768px) {
+  header {
+    padding: 8px 14px;
+  }
+
+  .brand {
+    font-size: 0.9rem;
+  }
+
+  main {
+    margin-top: 70px;
+    padding: 40px 16px;
+  }
+
+  .form-container {
+    padding: 32px;
+    border-radius: 16px;
+  }
+
+  .form-container h2 {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+
+  form {
+    gap: 18px;
+  }
+
+  .radio-group {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    width: calc(100% - 24px);
+    padding: 8px 10px;
+  }
+
+  main {
+    margin-top: 65px;
+    padding: 24px 12px;
+  }
+
+  .form-container {
+    padding: 24px;
+  }
+
+  .form-container h2 {
+    font-size: 20px;
+    margin-bottom: 18px;
+  }
+
+  form {
+    gap: 16px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="date"],
+  input[type="password"] {
+    font-size: 16px;
+  }
+
+  .radio-group {
+    flex-direction: column;
+    gap: 12px;
+  }
+}

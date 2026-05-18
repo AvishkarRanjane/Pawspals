@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Registration — PawsPals Pet Shop</title>
+  <link rel="stylesheet" href="style1.css" />
+</head>
+<body>
+
+  <!-- HEADER/NAV -->
+  <header>
+    <div class="brand">🐾 <strong>PawsPals</strong></div>
+    <nav class="nav-links">
+      <a href="index.html#home">Home</a>
+      <a href="index.html#pets">Pets</a>
+      <a href="index.html#shop">Shop</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- MAIN FORM CONTENT -->
+  <main>
+    <div class="form-container">
+      <h2>🐾 Pet Parent Registration</h2>
+      
+      <form>
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" required>
+        </div>
+
+        <div class="form-group">
+          <label>Gender</label>
+          <div class="radio-group">
+            <div class="radio-option">
+              <input type="radio" id="male" name="gender" value="Male" required>
+              <label for="male">Male</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" id="female" name="gender" value="Female" required>
+              <label for="female">Female</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" id="other" name="gender" value="Other">
+              <label for="other">Other</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="dob">Date of Birth</label>
+          <input type="date" id="dob" name="dob" required>
+        </div>
+
+        <div class="form-group">
+          <label for="store">Preferred Store Location</label>
+          <select id="store" name="store" required>
+            <option value="">Select a store</option>
+            <option value="Delhi Store">Delhi Store</option>
+            <option value="Mumbai Store">Mumbai Store</option>
+            <option value="Bangalore Store">Bangalore Store</option>
+            <option value="Hyderabad Store">Hyderabad Store</option>
+            <option value="Chennai Store">Chennai Store</option>
+            <option value="Kolkata Store">Kolkata Store</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="pet_preference">Which Pet Are You Most Interested In?</label>
+          <select id="pet_preference" name="pet_preference" required>
+            <option value="">Select pet type</option>
+            <option value="Dogs">Dogs</option>
+            <option value="Cats">Cats</option>
+            <option value="Birds">Birds</option>
+            <option value="Fish">Fish</option>
+            <option value="Small Pets">Small Pets (Rabbits, Hamsters, etc.)</option>
+            <option value="All Pets">All Pets</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="feedback">Your Feedback & Requirements (Optional)</label>
+          <textarea id="feedback" name="feedback" placeholder="Tell us about your pet care needs, requirements, or suggestions..." rows="4"></textarea>
+        </div>
+
+        <input type="submit" value="Register Now">
+      </form>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div>© 2025 PawsPals. All rights reserved. | <a href="index.html">Back to Shop</a></div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
